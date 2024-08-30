@@ -1,0 +1,135 @@
+@import url('http://fonts.googleapis.com/css2family=DM+Sans:wght@400;500;700&family=Nunito:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* .header{
+    background-color: blue;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.navbar{
+    max-width: 1024px;
+    background-color: #0f004a;
+    margin: auto;
+    height: 56px;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+} */
+
+@layer base{
+    html{
+        @apply scroll-smooth;
+    }
+    
+    body{
+        @apply text-white dark:text-gray-400 bg-blue-600 tracking-wider font-dmsans dark:bg-gray-800;
+    }
+    
+    section{
+        @apply pt-16 pb-4 md:pt-20;
+    }
+}
+
+@layer components{
+    .btn{
+        @apply inline-block text-sm py-3 px-8 capitalize text-center cursor-pointer rounded-md ease-linear duration-200;
+    }
+
+    .btn-primary {
+        @apply text-black bg-yellow-500 hover:opacity-75
+    }
+}
+
+@layer utilities{
+    .home__title,
+    .card__title,
+    .section__title {
+        @apply text-4xl font-oswald font-bold uppercase lg:text-6xl;
+    }
+
+    .section__title{
+        @apply text-3xl;
+    }
+
+    .card__title{
+        @apply text-xl;
+    }
+
+    .seperator{
+        @apply w-28 h-[2px] bg-yellow-600 my-5;
+    }
+
+    .paragraph{
+        @apply text-white text-xs leading-5;
+    }
+}
+
+.tabs_wrap ul li:hover,
+.tabs_wrap ul li.active{
+    @apply bg-yellow-700 text-black;
+}
+
+
+/* =========================================================== */
+
+/* @layer base{
+    html{
+        @apply scroll-smooth;
+    }
+    
+    body{
+        @apply text-whiteColor bg-primaryColor tracking-wider font-dmsans dark:bg-darkColor;
+    }
+ 
+
+    section{
+        @apply pt-16 pb-4 md:pt-20;
+    }
+}
+
+@layer components{
+    .btn{
+        @apply inline-block text-sm py-3 px-8 capitalize text-center cursor-pointer rounded-md ease-linear duration-200;
+    }
+
+    .btn-primary {
+        @apply text-blackColor bg-secondaryColor hover:opacity-75
+    }
+}
+
+@layer utilities{
+    .home__title,
+    .card__title,
+    .section__title {
+        @apply text-4xl font-oswald font-bold uppercase lg:text-6xl;
+    }
+
+    .section__title{
+        @apply text-3xl;
+    }
+
+    .card__title{
+        @apply text-xl;
+    }
+
+    .seperator{
+        @apply w-28 h-[2px] bg-secondaryColor my-5;
+    }
+
+    .paragraph{
+        @apply text-paragraphColor text-xs leading-5;
+    }
+}
+
+.tabs_wrap ul li:hover,
+.tabs_wrap ul li.active{
+    @apply bg-secondaryColor text-blackColor;
+} */
